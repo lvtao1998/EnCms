@@ -1,0 +1,4 @@
+<?php
+//000000000060
+ exit();?>
+think_serialize:a:2:{i:0;a:12:{s:2:"id";i:56;s:5:"title";s:18:"栏目内容管理";s:4:"icon";s:19:"icon-shiyongwendang";s:8:"parentid";i:55;s:3:"app";s:5:"admin";s:10:"controller";s:5:"admin";s:6:"action";s:5:"admin";s:9:"parameter";s:0:"";s:6:"status";i:1;s:3:"tip";s:0:"";s:6:"is_dev";i:0;s:9:"listorder";i:0;}i:1;a:12:{s:2:"id";i:62;s:5:"title";s:18:"模块扩展管理";s:4:"icon";s:12:"icon-tiaoshi";s:8:"parentid";i:55;s:3:"app";s:5:"admin";s:10:"controller";s:5:"admin";s:6:"action";s:5:"admin";s:9:"parameter";s:0:"";s:6:"status";i:1;s:3:"tip";s:0:"";s:6:"is_dev";i:0;s:9:"listorder";i:0;}}

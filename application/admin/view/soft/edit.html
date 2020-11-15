@@ -1,0 +1,365 @@
+{extend name="index_layout"/}
+{block name="main"}
+<div class="layui-card">
+  <div class="layui-card-header">软件信息修改</div>
+    <div class="layui-card-body">
+        <form class="layui-form" method="post" id="form1" enctype="multipart/form-data">
+            <div class="layui-form-item">
+                <label class="layui-form-label">栏目</label>
+                <div class="layui-input-inline">
+                    <select name="classid" lay-verify="required" lay-search="">
+                      <option value="">请选择所属栏目</option>
+                      {volist name="infoclass" id="vo"}
+                      <option value="{$vo.id}" {if condition="$vo.infotype neq 3"} disabled=""{/if} {if condition="$edit.classid eq $vo.id"} selected="" {/if}>{$vo.classname}</option>
+                      {/volist}
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux">带<span style="color: red">*</span>号表示为必填项</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">软件名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" lay-verify="required" name="title" value="{$edit.title}" placeholder="软件名称">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">属性</label>
+                <div class="layui-input-inline">
+                  <input type="checkbox" name="flag[]" lay-skin="primary" title="头条[h]" value="h" {if condition="in_array('h',$edit.flag)"} checked=""{/if}>
+                  <input type="checkbox" name="flag[]" lay-skin="primary" title="推荐[c]" value="c" {if condition="in_array('c',$edit.flag)"} checked=""{/if}>
+                  <input type="checkbox" name="flag[]" lay-skin="primary" title="特荐[a]" value="a" {if condition="in_array('a',$edit.flag)"} checked=""{/if}>
+                  <input type="checkbox" name="flag[]" lay-skin="primary" title="幻灯[f]" value="f" {if condition="in_array('f',$edit.flag)"} checked=""{/if}>
+                  <input type="checkbox" name="flag[]" lay-skin="primary" title="滚动[s]" value="s" {if condition="in_array('s',$edit.flag)"} checked=""{/if}>
+                  <input type="checkbox" name="flag[]" lay-skin="primary" title="跳转[j]" value="j" {if condition="in_array('j',$edit.flag)"} checked=""{/if}>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">文件类型</label>
+                <div class="layui-input-inline">
+                    <select name="filetype" lay-verify="required" lay-search="">
+                    <option value=".exe"{if condition="$edit.filetype eq '.exe'"} selected=""{/if}>.exe</option>
+                    <option value=".zip"{if condition="$edit.filetype eq '.zip'"} selected=""{/if}>.zip</option>
+                    <option value=".rar"{if condition="$edit.filetype eq '.rar'"} selected=""{/if}>.rar</option>
+                    <option value=".iso"{if condition="$edit.filetype eq '.iso'"} selected=""{/if}>.iso</option>
+                    <option value=".gz"{if condition="$edit.filetype eq '.gz'"} selected=""{/if}>.gz</option>
+                    <option value="其它"{if condition="$edit.filetype eq '其它'"} selected=""{/if}>其它</option>
+                  </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">软件类型</label>
+                <div class="layui-input-inline">
+                  <select name="softtype" lay-verify="required" lay-search="">
+                    <option value="国产软件"{if condition="$edit.softtype eq '国产软件'"} selected=""{/if}>国产软件</option>
+                    <option value="国外软件"{if condition="$edit.softtype eq '国外软件'"} selected=""{/if}>国外软件</option>
+                    <option value="汉化补丁"{if condition="$edit.softtype eq '汉化补丁'"} selected=""{/if}>汉化补丁</option>
+                  </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">界面语言</label>
+                <div class="layui-input-inline">
+                  <select name="language" lay-verify="required" lay-search="">
+                    <option value="简体中文"{if condition="$edit.language eq '简体中文'"} selected=""{/if}>简体中文</option>
+                    <option value="英文软件"{if condition="$edit.language eq '英文软件'"} selected=""{/if}>英文软件</option>
+                    <option value="繁体中文"{if condition="$edit.language eq '繁体中文'"} selected=""{/if}>繁体中文</option>
+                    <option value="其它类型"{if condition="$edit.language eq '其它类型'"} selected=""{/if}>其它类型</option>
+                  </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">授权方式</label>
+                <div class="layui-input-inline">
+                  <select name="accredit" lay-verify="required" lay-search="">
+                    <option value="共享软件"{if condition="$edit.accredit eq '共享软件'"} selected=""{/if}>共享软件</option>
+                    <option value="免费软件"{if condition="$edit.accredit eq '免费软件'"} selected=""{/if}>免费软件</option>
+                    <option value="开源软件"{if condition="$edit.accredit eq '开源软件'"} selected=""{/if}>开源软件</option>
+                    <option value="商业软件"{if condition="$edit.accredit eq '商业软件'"} selected=""{/if}>商业软件</option>
+                    <option value="破解软件"{if condition="$edit.accredit eq '破解软件'"} selected=""{/if}>破解软件</option>
+                    <option value="游戏外挂"{if condition="$edit.accredit eq '游戏外挂'"} selected=""{/if}>游戏外挂</option>
+                  </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">软件大小</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="softsize" placeholder="软件大小">
+                    <select name="unit">
+                      <option value="MB"{if condition="$edit.unit eq 'MB'"} selected=""{/if}>MB</option>
+                      <option value="KB"{if condition="$edit.unit eq 'KB'"} selected=""{/if}>KB</option>
+                      <option value="GB"{if condition="$edit.unit eq 'GB'"} selected=""{/if}>GB</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">运行环境</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="runos" value="{$edit.runos}" placeholder="运行环境">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">官方网站</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="website" value="{$edit.website}" placeholder="官方网站">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">演示地址</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="demourl" value="{$edit.demourl}" placeholder="演示地址">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">下载地址</label>
+                <div class="layui-input-inline">
+                  <button type="button" class="layui-btn" id="test3"><i class="layui-icon"></i>上传文件</button>
+                  <input type="hidden" name="dlurl" id="dlurl" value="{$edit.dlurl}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">文章来源</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="source" value="{$edit.source}" placeholder="文章来源">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">作者编辑</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="author" value="{$edit.author}" placeholder="作者编辑">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">跳转链接</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="linkurl" value="{$edit.linkurl}" placeholder="跳转链接">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">关键词</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="keywords" value="{$edit.keywords}" placeholder="关键词">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">摘要</label>
+                <div class="layui-input-inline">
+                  <textarea class="layui-textarea" name="description" placeholder="摘要">{$edit.description}</textarea>
+                </div>
+                <div class="layui-form-mid layui-word-aux">最多输入255字符</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">内容</label>
+                <div class="layui-input-inline">
+                    <textarea class="layui-textarea" id="editor_id" name="content" placeholder="内容">{$edit.content}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">宽度</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="widths" value="{$edit.widths}" id="widths" placeholder="宽度">
+                </div>
+                <div class="layui-form-mid layui-word-aux">px</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">高度</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="heights" value="{$edit.heights}" id="heights" placeholder="高度">
+                </div>
+                <div class="layui-form-mid layui-word-aux">px</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">图片</label>
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn" id="test1">上传图片</button>
+                    <div class="layui-upload-list">
+                        <input type="hidden" id="picurl">
+                        <img class="layui-upload-img" style="width: 100px" id="demo1" src="{$edit.picurl}">
+                        <p id="demoText"></p>
+                    </div>
+                    <div id="bs"></div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">组图</label>
+                <div class="layui-upload">
+                  <button type="button" class="layui-btn" id="test2">多图片上传</button> 
+                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                    预览图：
+                    <div class="layui-upload-list" id="demo2">{if condition="$edit.picarr"}{volist name="$edit.picarr" id="vo"}<img src="{$vo}" class="layui-upload-img" style="width:100px">{/volist}{/if}</div>
+                    <div class="layui-upload-list" id="demo3"></div>
+                 </blockquote>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">点击次数</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="hits" value="{$edit.hits}" placeholder="点击次数">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">排列排序</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" value="{$edit.orderid}" name="orderid" value="50" placeholder="排列排序">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">更新时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="posttime" value="{$time}" readonly="readonly" id="test5" placeholder="yyyy-MM-dd HH:mm:ss">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">审核</label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="checkinfo" value="true" title="是" {if condition="$edit.checkinfo eq 'true'"}checked=""{/if}>
+                    <input type="radio" name="checkinfo" value="false" title="否" {if condition="$edit.checkinfo eq 'false'"}checked=""{/if}>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="hidden" name="id" value="{$edit.id}">
+                    <button class="layui-btn" lay-submit="" lay-filter="formSubmit">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="script"}
+<script charset="utf-8" src="__STATIC__/kindeditor/kindeditor-all-min.js"></script>
+<script charset="utf-8" src="__STATIC__/kindeditor/lang/zh-CN.js"></script>
+<script>
+  KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_id',{
+      afterBlur: function () { this.sync(); }
+    });
+  });
+</script>
+<script>
+layui.use('upload', function(){
+  var $ = layui.jquery
+  ,upload = layui.upload;
+  
+  //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#test1'
+    ,url: "{:url('Upload/upload')}" //改成您自己的上传接口
+    ,accept:"images"
+    ,acceptMime:"image/*"
+    ,before: function(obj){
+      layer.load(); //上传loading
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo1').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+      $("#picurl").attr('name','picurl');
+      $("#picurl").attr('value',res['data']['src']);
+      $("#bs").html("");
+      $("#bs").append('<button type="button" onclick="delImg()" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon"></i></button>');
+      layer.closeAll('loading'); //关闭loading
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+      demoText.find('.demo-reload').on('click', function(){
+        uploadInst.upload();
+      });
+    }
+  }); 
+  //多图片上传
+  upload.render({
+    elem: '#test2'
+    ,url: "{:url('Upload/upload')}" //改成您自己的上传接口
+    ,data:{
+      width: function(){
+        return $('#widths').val();
+      },
+      height: function(){
+        return $('#heights').val();
+      },
+    }
+    ,accept:"images"
+    ,acceptMime:"image/*"
+    ,multiple: true
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img" style="width:100px">')
+      });
+    }
+    ,done: function(res){
+      //上传完毕
+      $('#demo3').append('<input type="hidden" name="picarr[]" value="'+res['data']['src']+'">')
+    }
+  });  
+});
+function delImg(){
+  layer.load(); //上传loading
+  var picurl = $("#picurl").val();
+  $.ajax({
+    url:"{:url('Upload/delImg')}",
+    type:"post",
+    data:{picurl:picurl},
+    success(e){
+      if(e.code>0){
+          $('#demo1').attr("src","")
+          $("#picurl").attr("value","404")
+          $("#bs").html("")
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }else{
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }
+    }
+  })
+}  
+</script>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  //日期时间选择器
+  laydate.render({
+    elem: '#test5'
+    ,type: 'datetime'
+  });
+});
+</script>
+<script>
+$(function(){
+  var desc = $("#demo1").attr("src");
+  if(desc){
+    $("#bs").append('<button type="button" onclick="delImgs()" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon"></i></button>');
+  }
+})
+function delImgs(){
+  var desc = $("#demo1").attr("src");
+  layer.load(); //上传loading
+  $.ajax({
+    url:"{:url('Upload/delImg')}",
+    type:"post",
+    data:{picurl:desc},
+    success(e){
+      if(e.code>0){
+          $('#demo1').attr("src","")
+          $("#picurl").attr("value","404")
+          $("#bs").html("")
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }else{
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }
+    }
+  })
+}  
+</script>
+{/block}

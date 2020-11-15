@@ -1,0 +1,142 @@
+{extend name="index_layout"/}
+{block name="main"}
+<div class="layui-card">
+	<div class="layui-card-header">添加留言</div>
+    <div class="layui-card-body">
+        <form class="layui-form" method="post">
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" lay-verify="required" name="nickname" placeholder="用户名">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">联系方式</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" lay-verify="required" name="contact" placeholder="联系方式">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">留言内容</label>
+                <div class="layui-input-inline">
+                    <textarea class="layui-textarea" id="editor_id" name="content" placeholder="留言内容"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">回复内容</label>
+                <div class="layui-input-inline">
+                    <textarea class="layui-textarea" id="editor_ids" name="recont" placeholder="回复内容"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">排列排序</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="orderid" value="50" placeholder="排列排序">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">更新时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="posttime" value="{$time}" readonly="readonly" id="test5" placeholder="yyyy-MM-dd HH:mm:ss">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">状态</label>
+                <div class="layui-input-inline">
+                  <input type="checkbox" name="htop" lay-skin="primary" title="置顶[h]" value="true">
+                  <input type="checkbox" name="rtop" lay-skin="primary" title="推荐[r]" value="true">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">审核</label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="checkinfo" value="true" title="是" checked="">
+                    <input type="radio" name="checkinfo" value="false" title="否">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="formSubmit">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="script"}
+<script charset="utf-8" src="__STATIC__/kindeditor/kindeditor-all-min.js"></script>
+<script charset="utf-8" src="__STATIC__/kindeditor/lang/zh-CN.js"></script>
+<script>
+  KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_id',{
+      afterBlur: function () { this.sync(); }
+    });
+  });
+  KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_ids',{
+      afterBlur: function () { this.sync(); }
+    });
+  });
+</script>
+<script>
+layui.use('upload', function(){
+  var $ = layui.jquery
+  ,upload = layui.upload;
+  
+  //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#test1'
+    ,url: "{:url('Upload/upload')}" //改成您自己的上传接口
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo1').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+      $("#picurl").attr('name','picurl');
+      $("#picurl").attr('value',res['data']['src']);
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+      demoText.find('.demo-reload').on('click', function(){
+        uploadInst.upload();
+      });
+    }
+  });
+  //多图片上传
+  upload.render({
+    elem: '#test2'
+    ,url: "{:url('Upload/upload')}" //改成您自己的上传接口
+    ,multiple: true
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img" style="width:100px">')
+      });
+    }
+    ,done: function(res){
+      //上传完毕
+      $('#demo3').append('<input type="hidden" name="picarr[]" value="'+res['data']['src']+'">')
+    }
+  }); 
+});
+</script>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  //日期时间选择器
+  laydate.render({
+    elem: '#test5'
+    ,type: 'datetime'
+  });
+});
+</script>
+{/block}

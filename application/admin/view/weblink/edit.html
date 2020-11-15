@@ -1,0 +1,191 @@
+{extend name="index_layout"/}
+{block name="main"}
+<div class="layui-card">
+  <div class="layui-card-header">修改友情链接</div>
+    <div class="layui-card-body">
+        <form class="layui-form" method="post">
+            <div class="layui-form-item">
+                <label class="layui-form-label">网站名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" value="{$edit.webname}" lay-verify="required" name="webname" placeholder="网站名称">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">跳转链接</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="linkurl" value="{$edit.linkurl}" placeholder="跳转链接">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">网站描述</label>
+                <div class="layui-input-inline">
+                  <textarea class="layui-textarea" name="webnote" placeholder="网站描述">{$edit.webnote}</textarea>
+                </div>
+                <div class="layui-form-mid layui-word-aux">最多输入255字符</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">宽度</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="widths" id="widths" value="{$edit.widths}" placeholder="宽度">
+                </div>
+                <div class="layui-form-mid layui-word-aux">px</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">高度</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="heights" id="heights" value="{$edit.heights}" placeholder="高度">
+                </div>
+                <div class="layui-form-mid layui-word-aux">px</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">图片</label>
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn" id="test1">上传图片</button>
+                    <div class="layui-upload-list">
+                        <input type="hidden" id="picurl">
+                        <img class="layui-upload-img" style="width: 100px" id="demo1" src="{$edit.picurl}">
+                        <p id="demoText"></p>
+                    </div>
+                    <div id="bs"></div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">排列排序</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="orderid" value="{$edit.orderid}" placeholder="排列排序">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">更新时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="posttime" value="{$time}" readonly="readonly" id="test5" placeholder="yyyy-MM-dd HH:mm:ss">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">审核</label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="checkinfo" value="true" title="是"{if condition="$edit.checkinfo eq 'true'"} checked=""{/if}>
+                    <input type="radio" name="checkinfo" value="false" title="否"{if condition="$edit.checkinfo eq 'false'"} checked=""{/if}>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="hidden" name="id" value="{$edit.id}">
+                    <button class="layui-btn" lay-submit="" lay-filter="formSubmit">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="script"}
+<script>
+layui.use('upload', function(){
+  var $ = layui.jquery
+  ,upload = layui.upload;
+  
+  //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#test1'
+    ,url: "{:url('Upload/upload')}" //改成您自己的上传接口
+    ,data:{
+      width: function(){
+        return $('#widths').val();
+      },
+      height: function(){
+        return $('#heights').val();
+      },
+    }
+    ,accept:"images"
+    ,acceptMime:"image/*"
+    ,before: function(obj){
+      layer.load(); //上传loading
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo1').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+      $("#picurl").attr('name','picurl');
+      $("#picurl").attr('value',res['data']['src']);
+      $("#bs").html("");
+      $("#bs").append('<button type="button" onclick="delImg()" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon"></i></button>');
+      layer.closeAll('loading'); //关闭loading
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+      demoText.find('.demo-reload').on('click', function(){
+        uploadInst.upload();
+      });
+    }
+  }); 
+});
+function delImg(){
+  layer.load(); //上传loading
+  var picurl = $("#picurl").val();
+  $.ajax({
+    url:"{:url('Upload/delImg')}",
+    type:"post",
+    data:{picurl:picurl},
+    success(e){
+      if(e.code>0){
+          $('#demo1').attr("src","")
+          $("#picurl").attr("value","404")
+          $("#bs").html("")
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }else{
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }
+    }
+  })
+}  
+</script>
+<script>
+$(function(){
+  var desc = $("#demo1").attr("src");
+  if(desc){
+    $("#bs").append('<button type="button" onclick="delImgs()" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon"></i></button>');
+  }
+})
+function delImgs(){
+  var desc = $("#demo1").attr("src");
+  layer.load(); //上传loading
+  $.ajax({
+    url:"{:url('Upload/delImg')}",
+    type:"post",
+    data:{picurl:desc},
+    success(e){
+      if(e.code>0){
+          $('#demo1').attr("src","")
+          $("#picurl").attr("value","404")
+          $("#bs").html("")
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }else{
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }
+    }
+  })
+}  
+</script>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  //日期时间选择器
+  laydate.render({
+    elem: '#test5'
+    ,type: 'datetime'
+  });
+});
+</script>
+{/block}

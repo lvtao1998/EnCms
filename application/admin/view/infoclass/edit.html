@@ -1,0 +1,240 @@
+{extend name="index_layout"/}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-header">添加网站栏目</div>
+    <div class="layui-card-body">
+        <form class="layui-form" method="post">
+            <div class="layui-form-item">
+                <label class="layui-form-label">栏目类型</label>
+                <div class="layui-input-inline w300">
+                    <select name="infotype" lay-verify="required">
+                        <option value="0"{if condition="$edit.infotype eq 0"} selected=""{/if}>单页</option>
+                        <option value="1"{if condition="$edit.infotype eq 1"} selected=""{/if}>列表</option>
+                        <option value="2"{if condition="$edit.infotype eq 2"} selected=""{/if}>图片</option>
+                        <option value="3"{if condition="$edit.infotype eq 3"} selected=""{/if}>下载</option>
+                        <option value="4"{if condition="$edit.infotype eq 4"} selected=""{/if}>商品</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">所属栏目</label>
+                <div class="layui-input-inline w300">
+                    <select name="parentid" lay-verify="required">
+                        <option value="0"{if condition="$edit.parentid eq 0"} selected=""{/if}>一级栏目</option>
+                        {volist name="parent" id="vo"}
+                        <option value="{$vo.id}"{if condition="$edit.parentid eq $vo.id"} selected=""{/if}>{$vo.classname}</option>
+                        {/volist}
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux">如果选择上级分类，那么新增的分类则为被选择上级分类的子分类</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">栏目名称 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="classname" value="{$edit.classname}" lay-verify="required" autocomplete="off" placeholder="栏目名称" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">宽度</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="widths" id="widths" value="{$edit.widths}" placeholder="宽度">
+                </div>
+                <div class="layui-form-mid layui-word-aux">px</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">高度</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="heights" id="heights" value="{$edit.heights}" placeholder="宽度">
+                </div>
+                <div class="layui-form-mid layui-word-aux">px</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">添加水印</label>
+                <div class="layui-input-inline">
+                  <input type="checkbox" title="添加水印" lay-filter="watermark">
+                  <input type="hidden" id="watermark">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">上传缩略图 </label>
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn" id="test1">上传缩略图</button>
+                    <div class="layui-upload-list">
+                        <img class="layui-upload-img" style="width: 100px" id="demo1" src="{$edit.picurl}">
+                        <p id="demoText"></p>
+                    </div>
+                    <div id="bs"></div>
+                    <input type="hidden" name="picurl" value="" id="picurl">
+                </div> 
+                <div class="layui-form-mid layui-word-aux">添加了宽度和高度自动生成从中间剪切的缩略图</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">跳转链接 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="linkurl" value="{$edit.linkurl}" autocomplete="off" placeholder="跳转链接" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">SEO标题 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="seotitle" value="{$edit.seotitle}" autocomplete="off" placeholder="SEO标题" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">关键词 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="keywords" value="{$edit.keywords}" autocomplete="off" placeholder="关键词" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">栏目描述 </label>
+                <div class="layui-input-inline w300">
+                    <textarea class="layui-textarea" name="description">{$edit.description}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">排列排序 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="orderid" lay-verify="required" value="{$edit.orderid}" autocomplete="off" placeholder="排列排序" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">隐藏栏目</label>
+                <div class="layui-input-inline w300">
+                    <input type="checkbox" name="checkinfo" lay-skin="switch" lay-text="是|否" value="true"{if condition="$edit.checkinfo eq 'true'"} checked=""{/if}>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="hidden" name="id" value="{$edit.id}">
+                    <button class="layui-btn" lay-submit="" lay-filter="formSubmit">立即提交</button>
+                    <button class="layui-btn layui-btn-normal" type="button" onclick="javascript:history.back(-1);">返回</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="script"}
+<script>
+layui.use(['upload','form'], function(){
+  var $ = layui.jquery
+  ,upload = layui.upload
+  ,form = layui.form;
+  
+  //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#test1'
+    ,url: '{:url("Upload/upload")}' //改成您自己的上传接口
+    ,data:{
+      width: function(){
+        return $('#widths').val();
+      },
+      height: function(){
+        return $('#heights').val();
+      },
+      watermark: function(){
+          return $('#watermark').val();
+      }
+    }
+    ,accept:"images"
+    ,acceptMime:"image/*"
+    ,before: function(obj){
+        layer.load(); //上传loading
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo1').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      $("#picurl").attr('value',res['data']['src']);
+      $("#bs").html("");
+      $("#bs").append('<button type="button" onclick="delImg()" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon"></i></button>');
+      layer.closeAll('loading'); //关闭loading
+      //上传成功
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+      demoText.find('.demo-reload').on('click', function(){
+        uploadInst.upload();
+      });
+      layer.closeAll('loading'); //关闭loading
+    }
+  }); 
+  form.on('checkbox(watermark)', function(data){
+    if(data.elem.checked)
+    {
+      $("#watermark").attr("value","1");
+    }
+    else
+    {
+      $("#watermark").attr("value","");
+    }
+  });   
+});
+function delImg(){
+  layer.load(); //上传loading
+  var picurl = $("#picurl").val();
+  $.ajax({
+    url:"{:url('Upload/delImg')}",
+    type:"post",
+    data:{picurl:picurl},
+    success(e){
+      if(e.code>0){
+          $('#demo1').attr("src","")
+          $("#picurl").attr("value","404")
+          $("#bs").html("")
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }else{
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }
+    }
+  })
+} 
+</script>
+<script>
+$(function(){
+  var desc = $("#demo1").attr("src");
+  if(desc){
+    $("#bs").append('<button type="button" onclick="delImgs()" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon"></i></button>');
+  }
+})
+function delImgs(){
+  var desc = $("#demo1").attr("src");
+  layer.load(); //上传loading
+  $.ajax({
+    url:"{:url('Upload/delImg')}",
+    type:"post",
+    data:{picurl:desc},
+    success(e){
+      if(e.code>0){
+          $('#demo1').attr("src","")
+          $("#picurl").attr("value","404")
+          $("#bs").html("")
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }else{
+          layer.closeAll('loading'); //关闭loading
+          layer.msg(e.msg);
+        }
+    }
+  })
+}  
+</script>
+<script>
+  $(function(){
+    var desc = $("#demo1").attr("src");
+    if(desc){
+      $("#bs").append('<button type="button" onclick="delImg()" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon"></i></button>');
+    }
+  })
+</script>
+{/block}

@@ -1,0 +1,2658 @@
+---------------------------------------------------------------
+
+[2020-11-03T10:20:28+08:00] 127.0.0.1 GET www.test.com/
+[运行时间：0.250656s] [吞吐率：3.99req/s] [内存消耗：3,763.00kb] [文件加载：148]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\index\view\index\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001131s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.014797s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.002009s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:28+08:00] 127.0.0.1 GET www.test.com/favicon.ico
+[运行时间：0.069716s] [吞吐率：14.34req/s] [内存消耗：3,761.19kb] [文件加载：149]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009871s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001103s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000539s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:34+08:00] 127.0.0.1 GET www.test.com/admin
+[运行时间：1.255866s] [吞吐率：0.80req/s] [内存消耗：4,510.79kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\common\view\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012855s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001325s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000586s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_adminlog` [ RunTime:0.002164s ]
+[ sql ] [ SQL ] INSERT INTO `en_adminlog` (`uid` , `status` , `info` , `get` , `ip` , `create_time`) VALUES (0 , 0 , '提示语:请先登陆' , '/admin' , '127.0.0.1' , 1604370034) [ RunTime:0.148640s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:38+08:00] 127.0.0.1 GET www.test.com/admin/index/login.html
+[运行时间：0.067994s] [吞吐率：14.71req/s] [内存消耗：4,205.45kb] [文件加载：163]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/login_html' => '',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\index\login.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024382s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001927s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.001155s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:38+08:00] 127.0.0.1 GET www.test.com/captcha.html
+[运行时间：0.254133s] [吞吐率：3.93req/s] [内存消耗：3,423.70kb] [文件加载：141]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+  'rule' => 'captcha/<id?>',
+  'route' => '\\think\\captcha\\CaptchaController@index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/index/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000807s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001130s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000623s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:44+08:00] 127.0.0.1 POST www.test.com/admin/index/login.html
+[运行时间：0.217472s] [吞吐率：4.60req/s] [内存消耗：4,523.54kb] [文件加载：167]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.test.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.test.com/admin/index/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/login_html' => '',
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'rvv8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010359s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001088s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000540s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002381s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_loginif` [ RunTime:0.002428s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `en_loginif` WHERE  `ip` = '127.0.0.1' [ RunTime:0.040372s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001324s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.001461s ]
+[ sql ] [ SQL ] UPDATE `en_admin`  SET `last_login_time` = 1604370044 , `last_login_ip` = '127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.034995s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012005s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] DELETE FROM `en_loginif` WHERE  `ip` = '127.0.0.1' [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_adminlog` [ RunTime:0.000957s ]
+[ sql ] [ SQL ] INSERT INTO `en_adminlog` (`uid` , `status` , `info` , `get` , `ip` , `create_time`) VALUES (1 , 1 , '提示语:恭喜您，登陆成功' , '/admin/index/login.html' , '127.0.0.1' , 1604370044) [ RunTime:0.067525s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:46+08:00] 127.0.0.1 GET www.test.com/admin/index/index.html
+[运行时间：0.193581s] [吞吐率：5.17req/s] [内存消耗：4,801.65kb] [文件加载：173]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\index\index.html [ array (
+  0 => 'userInfo',
+  1 => 'SUBMENU_CONFIG',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000668s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.000979s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001046s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_menu` [ RunTime:0.001675s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 0  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001713s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 3  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 10  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 11  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 27  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 24  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 25  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 26  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 13  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 14  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 28  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 29  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 30  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 31  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 15  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 16  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 18  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 19  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 21  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 17  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 22  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 48  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 49  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 50  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 51  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 20  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 12  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 55  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 56  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 57  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 58  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 59  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 60  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 61  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 62  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 66  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 65  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` WHERE  `parentid` = 64  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000485s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:46+08:00] 127.0.0.1 GET www.test.com/admin/main/index.html
+[运行时间：0.094305s] [吞吐率：10.60req/s] [内存消耗：4,587.06kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/main/index_html' => '',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\main\index.html [ array (
+  0 => 'userInfo',
+  1 => 'sys_info',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000699s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001936s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000664s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001403s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SELECT VERSION() as version [ RunTime:0.000473s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:53+08:00] 127.0.0.1 GET www.test.com/admin/config/index/menuid/11.html
+[运行时间：0.094402s] [吞吐率：10.59req/s] [内存消耗：4,622.02kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/menuid/11_html' => '',
+  'menuid' => '11',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\config\index.html [ array (
+  0 => 'groupArray',
+  1 => 'group',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000761s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001306s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.002523s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000661s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:54+08:00] 127.0.0.1 GET www.test.com/admin/config/index/group/base.html?page=1&limit=10
+[运行时间：0.271174s] [吞吐率：3.69req/s] [内存消耗：4,363.51kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/config/index/menuid/11.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/group/base_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'group' => 'base',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000818s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001367s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.001313s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001120s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_config` [ RunTime:0.001102s ]
+[ sql ] [ SQL ] SELECT `config`.`id`,`config`.`name`,`config`.`title`,`config`.`type`,`config`.`listorder`,`config`.`status`,`config`.`update_time`,field_type.title as ftitle FROM `en_config` `config` LEFT JOIN `en_field_type` `field_type` ON `field_type`.`name`=`config`.`type` WHERE  `group` = 'base' ORDER BY `config`.`listorder` ASC,`config`.`id` DESC [ RunTime:0.198108s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:56+08:00] 127.0.0.1 GET www.test.com/admin/config/index/group/email.html
+[运行时间：0.053300s] [吞吐率：18.76req/s] [内存消耗：4,622.16kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/config/index/menuid/11.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/group/email_html' => '',
+  'group' => 'email',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\config\index.html [ array (
+  0 => 'groupArray',
+  1 => 'group',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000568s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.000953s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001952s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000523s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:56+08:00] 127.0.0.1 GET www.test.com/admin/config/index/group/email.html?page=1&limit=10
+[运行时间：0.049861s] [吞吐率：20.06req/s] [内存消耗：4,365.48kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/config/index/group/email.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/group/email_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'group' => 'email',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000558s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.000970s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001002s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_config` [ RunTime:0.000873s ]
+[ sql ] [ SQL ] SELECT `config`.`id`,`config`.`name`,`config`.`title`,`config`.`type`,`config`.`listorder`,`config`.`status`,`config`.`update_time`,field_type.title as ftitle FROM `en_config` `config` LEFT JOIN `en_field_type` `field_type` ON `field_type`.`name`=`config`.`type` WHERE  `group` = 'email' ORDER BY `config`.`listorder` ASC,`config`.`id` DESC [ RunTime:0.000668s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:56+08:00] 127.0.0.1 GET www.test.com/admin/config/index/group/base.html
+[运行时间：0.047625s] [吞吐率：21.00req/s] [内存消耗：4,622.41kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/config/index/group/email.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/group/base_html' => '',
+  'group' => 'base',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\config\index.html [ array (
+  0 => 'groupArray',
+  1 => 'group',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001006s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001064s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001309s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001212s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:57+08:00] 127.0.0.1 GET www.test.com/admin/config/index/group/base.html?page=1&limit=10
+[运行时间：0.052663s] [吞吐率：18.99req/s] [内存消耗：4,363.52kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/config/index/group/base.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/group/base_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'group' => 'base',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000746s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001477s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000940s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001080s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_config` [ RunTime:0.000900s ]
+[ sql ] [ SQL ] SELECT `config`.`id`,`config`.`name`,`config`.`title`,`config`.`type`,`config`.`listorder`,`config`.`status`,`config`.`update_time`,field_type.title as ftitle FROM `en_config` `config` LEFT JOIN `en_field_type` `field_type` ON `field_type`.`name`=`config`.`type` WHERE  `group` = 'base' ORDER BY `config`.`listorder` ASC,`config`.`id` DESC [ RunTime:0.000879s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:57+08:00] 127.0.0.1 GET www.test.com/admin/config/index/group/email.html
+[运行时间：0.047056s] [吞吐率：21.25req/s] [内存消耗：4,622.45kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/config/index/group/base.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/group/email_html' => '',
+  'group' => 'email',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\config\index.html [ array (
+  0 => 'groupArray',
+  1 => 'group',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000720s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001051s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001054s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000512s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:57+08:00] 127.0.0.1 GET www.test.com/admin/config/index/group/email.html?page=1&limit=10
+[运行时间：0.051875s] [吞吐率：19.28req/s] [内存消耗：4,365.48kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/config/index/group/email.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/group/email_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'group' => 'email',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000858s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001423s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001153s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_config` [ RunTime:0.001615s ]
+[ sql ] [ SQL ] SELECT `config`.`id`,`config`.`name`,`config`.`title`,`config`.`type`,`config`.`listorder`,`config`.`status`,`config`.`update_time`,field_type.title as ftitle FROM `en_config` `config` LEFT JOIN `en_field_type` `field_type` ON `field_type`.`name`=`config`.`type` WHERE  `group` = 'email' ORDER BY `config`.`listorder` ASC,`config`.`id` DESC [ RunTime:0.001914s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:58+08:00] 127.0.0.1 GET www.test.com/admin/config/index/group/base.html
+[运行时间：0.055612s] [吞吐率：17.98req/s] [内存消耗：4,622.43kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/config/index/group/email.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/group/base_html' => '',
+  'group' => 'base',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\config\index.html [ array (
+  0 => 'groupArray',
+  1 => 'group',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011140s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001106s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001104s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000488s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:20:58+08:00] 127.0.0.1 GET www.test.com/admin/config/index/group/base.html?page=1&limit=10
+[运行时间：0.060445s] [吞吐率：16.54req/s] [内存消耗：4,363.52kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/config/index/group/base.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/group/base_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'group' => 'base',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011169s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001238s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001266s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_config` [ RunTime:0.001404s ]
+[ sql ] [ SQL ] SELECT `config`.`id`,`config`.`name`,`config`.`title`,`config`.`type`,`config`.`listorder`,`config`.`status`,`config`.`update_time`,field_type.title as ftitle FROM `en_config` `config` LEFT JOIN `en_field_type` `field_type` ON `field_type`.`name`=`config`.`type` WHERE  `group` = 'base' ORDER BY `config`.`listorder` ASC,`config`.`id` DESC [ RunTime:0.001439s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:00+08:00] 127.0.0.1 GET www.test.com/admin/config/setting/menuid/13.html
+[运行时间：0.056423s] [吞吐率：17.72req/s] [内存消耗：4,640.34kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/setting/menuid/13_html' => '',
+  'menuid' => '13',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\config\setting.html [ array (
+  0 => 'groupArray',
+  1 => 'fieldList',
+  2 => 'group',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000778s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001490s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001036s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_config` [ RunTime:0.001886s ]
+[ sql ] [ SQL ] SELECT `name`,`title`,`remark`,`type`,`value`,`options` FROM `en_config` WHERE  `group` = 'base'  AND `status` = 1 ORDER BY `listorder`,`id` DESC [ RunTime:0.000704s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:01+08:00] 127.0.0.1 GET www.test.com/admin/menu/index/menuid/14.html
+[运行时间：0.065899s] [吞吐率：15.17req/s] [内存消耗：4,639.20kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/menu/index/menuid/14_html' => '',
+  'menuid' => '14',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\menu\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000826s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001042s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001115s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000514s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:01+08:00] 127.0.0.1 POST www.test.com/admin/menu/index.html
+[运行时间：0.073371s] [吞吐率：13.63req/s] [内存消耗：4,446.44kb] [文件加载：166]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'content-length' => '46',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.test.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.test.com/admin/menu/index/menuid/14.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/menu/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'filterRules' => '[]',
+  'sort' => '[]',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000595s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001012s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001277s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_menu` [ RunTime:0.001168s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` ORDER BY `listorder`,`id` DESC [ RunTime:0.000695s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:09+08:00] 127.0.0.1 GET www.test.com/admin/manager/index/menuid/16.html
+[运行时间：0.078898s] [吞吐率：12.67req/s] [内存消耗：4,729.85kb] [文件加载：174]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/manager/index/menuid/16_html' => '',
+  'menuid' => '16',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\manager\index.html [ array (
+  0 => 'groupdata',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001201s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001249s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001070s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT `id` FROM `en_admin` [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT a.id as uid,`g`.`id`,`g`.`parentid`,`roleid`,`title`,`rules` FROM `en_admin` `a` INNER JOIN `en_auth_group` `g` ON `g`.`id`=`a`.`roleid` WHERE  `a`.`id` = 1  AND `g`.`status` = 1 [ RunTime:0.014408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_auth_group` [ RunTime:0.000930s ]
+[ sql ] [ SQL ] SELECT * FROM `en_auth_group` WHERE  `status` = 1 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `en_auth_group` WHERE  `id` = 1 [ RunTime:0.000183s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:09+08:00] 127.0.0.1 GET www.test.com/admin/manager/index.html?page=1&limit=10
+[运行时间：0.052692s] [吞吐率：18.98req/s] [内存消耗：4,413.23kb] [文件加载：166]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/manager/index/menuid/16.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/manager/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000761s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001155s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT `id` FROM `en_admin` [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT a.id as uid,`g`.`id`,`g`.`parentid`,`roleid`,`title`,`rules` FROM `en_admin` `a` INNER JOIN `en_auth_group` `g` ON `g`.`id`=`a`.`roleid` WHERE  `a`.`id` = 1  AND `g`.`status` = 1 [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_auth_group` [ RunTime:0.000897s ]
+[ sql ] [ SQL ] SELECT * FROM `en_auth_group` WHERE  `status` = 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `en_auth_group` WHERE  `id` = 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `en_admin` WHERE  `id` = 1 ORDER BY `id` ASC [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 ORDER BY `id` ASC LIMIT 0,10 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT `title` FROM `en_auth_group` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000320s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:10+08:00] 127.0.0.1 GET www.test.com/admin/auth_manager/index/menuid/17.html
+[运行时间：0.058377s] [吞吐率：17.13req/s] [内存消耗：4,616.88kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth_manager/index/menuid/17_html' => '',
+  'menuid' => '17',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\auth_manager\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001783s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001227s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001099s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000368s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:10+08:00] 127.0.0.1 GET www.test.com/admin/auth_manager/index.html?page=1&limit=10
+[运行时间：0.048337s] [吞吐率：20.69req/s] [内存消耗：4,350.14kb] [文件加载：164]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/auth_manager/index/menuid/17.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth_manager/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000732s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001673s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001300s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000846s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_auth_group` [ RunTime:0.001162s ]
+[ sql ] [ SQL ] SELECT * FROM `en_auth_group` WHERE  `module` = 'admin' ORDER BY `id` ASC [ RunTime:0.000841s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:14+08:00] 127.0.0.1 GET www.test.com/admin/auth_manager/access.html?title=%20%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98&group_id=1
+[运行时间：0.106174s] [吞吐率：9.42req/s] [内存消耗：4,836.45kb] [文件加载：175]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/auth_manager/index/menuid/17.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth_manager/access_html' => '',
+  'title' => ' 超级管理员',
+  'group_id' => '1',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\auth_manager\managergroup.html [ array (
+  0 => 'group_id',
+  1 => 'json',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000743s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001082s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001104s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_menu` [ RunTime:0.000921s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_auth_rule` [ RunTime:0.001379s ]
+[ sql ] [ SQL ] SELECT * FROM `en_auth_rule` WHERE  `type` IN (1,2) ORDER BY `name` [ RunTime:0.001680s ]
+[ sql ] [ SQL ] INSERT INTO `en_auth_rule` (`name` , `title` , `module` , `type` , `status`) VALUES ( 'admin/setting/index','设置','admin',2,1 ) , ( 'admin/config/index1','系统配置','admin',1,1 ) , ( 'admin/config/index','配置管理','admin',1,1 ) , ( 'admin/adminlog/deletelog','删除日志','admin',1,1 ) , ( 'admin/config/setting','网站设置','admin',1,1 ) , ( 'admin/menu/index','菜单管理','admin',1,1 ) , ( 'admin/manager/index1','权限管理','admin',1,1 ) , ( 'admin/manager/index','管理员管理','admin',1,1 ) , ( 'admin/authManager/index','角色管理','admin',1,1 ) , ( 'admin/manager/add','添加管理员','admin',1,1 ) , ( 'admin/manager/edit','编辑管理员','admin',1,1 ) , ( 'admin/adminlog/index','管理日志','admin',1,1 ) , ( 'admin/manager/del','删除管理员','admin',1,1 ) , ( 'admin/authManager/createGroup','添加角色','admin',1,1 ) , ( 'admin/config/multi','批量更新','admin',1,1 ) , ( 'admin/menu/add','新增菜单','admin',1,1 ) , ( 'admin/menu/edit','编辑菜单','admin',1,1 ) , ( 'admin/menu/del','删除菜单','admin',1,1 ) , ( 'admin/menu/multi','批量更新','admin',1,1 ) , ( 'attachment/attachments/upload','附件上传','attachment',1,1 ) , ( 'attachment/attachments/del','附件删除','attachment',1,1 ) , ( 'attachment/ueditor/run','编辑器附件','attachment',1,1 ) , ( 'attachment/attachments/showFileLis','图片列表','attachment',1,1 ) , ( 'attachment/attachments/getUrlFile','图片本地化','attachment',1,1 ) , ( 'attachment/attachments/select','图片选择','attachment',1,1 ) , ( 'admin/authManager/editGroup','编辑角色','admin',1,1 ) , ( 'admin/authManager/deleteGroup','删除角色','admin',1,1 ) , ( 'admin/authManager/access','访问授权','admin',1,1 ) , ( 'admin/authManager/writeGroup','角色授权','admin',1,1 ) , ( 'admin/admin/admin','模块扩展管理','admin',1,1 ) , ( 'admin/Infoclass/index','栏目管理','admin',1,1 ) , ( 'admin/info/index','单页信息管理','admin',1,1 ) , ( 'admin/Infolist/index','列表信息管理','admin',1,1 ) , ( 'admin/Infoimg/index','图片信息管理','admin',1,1 ) , ( 'admin/Soft/index','软件下载管理','admin',1,1 ) , ( 'attachment/attachments/index','附件管理','attachment',1,1 ) , ( 'admin/config/add','新增配置','admin',1,1 ) , ( 'admin/admin/admin','cms管理','admin',2,1 ) , ( 'admin/Member/index','用户管理','admin',1,1 ) , ( 'admin/config/edit','编辑配置','admin',1,1 ) , ( 'admin/Weblink/index','友情链接管理','admin',1,1 ) , ( 'admin/config/del','删除配置','admin',1,1 ) , ( 'admin/message/index','留言模块管理','admin',1,1 ) [ RunTime:0.036025s ]
+[ sql ] [ SQL ] SELECT * FROM `en_menu` ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_auth_group` [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `en_auth_group` WHERE  `status` <> 0  AND `id` = 1  AND `type` = 1 LIMIT 1 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT `name`,`id` FROM `en_auth_rule` WHERE  `status` = 1 [ RunTime:0.000538s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:18+08:00] 127.0.0.1 GET www.test.com/admin/auth_manager/index/menuid/17.html
+[运行时间：0.068121s] [吞吐率：14.68req/s] [内存消耗：4,617.37kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth_manager/index/menuid/17_html' => '',
+  'menuid' => '17',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\auth_manager\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019854s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001134s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000353s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:18+08:00] 127.0.0.1 GET www.test.com/admin/auth_manager/index.html?page=1&limit=10
+[运行时间：0.050209s] [吞吐率：19.92req/s] [内存消耗：4,350.17kb] [文件加载：164]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/auth_manager/index/menuid/17.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth_manager/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000684s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001111s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001121s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_auth_group` [ RunTime:0.000902s ]
+[ sql ] [ SQL ] SELECT * FROM `en_auth_group` WHERE  `module` = 'admin' ORDER BY `id` ASC [ RunTime:0.000553s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:20+08:00] 127.0.0.1 GET www.test.com/admin/adminlog/index/menuid/20.html
+[运行时间：0.068271s] [吞吐率：14.65req/s] [内存消耗：4,573.70kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/adminlog/index/menuid/20_html' => '',
+  'menuid' => '20',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\adminlog\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019556s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001405s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001109s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000367s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:21+08:00] 127.0.0.1 GET www.test.com/admin/adminlog/index.html?page=1&limit=10
+[运行时间：0.058088s] [吞吐率：17.22req/s] [内存消耗：4,324.83kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/adminlog/index/menuid/20.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/adminlog/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010806s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001158s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_adminlog` [ RunTime:0.000922s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `en_adminlog` ORDER BY `id` DESC [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT * FROM `en_adminlog` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000356s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:37+08:00] 127.0.0.1 GET www.test.com/admin/info/index/menuid/58.html
+[运行时间：0.077952s] [吞吐率：12.83req/s] [内存消耗：4,560.71kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index/menuid/58_html' => '',
+  'menuid' => '58',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\info\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021482s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001062s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001044s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000330s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:38+08:00] 127.0.0.1 GET www.test.com/admin/info/index.html?page=1&limit=10
+[运行时间：0.130059s] [吞吐率：7.69req/s] [内存消耗：4,344.48kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/info/index/menuid/58.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021402s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001102s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001100s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_info` [ RunTime:0.012313s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`b`.`classname`,`a`.`posttime`,`a`.`classid` FROM `en_info` `a` INNER JOIN `en_infoclass` `b` ON `a`.`classid`=`b`.`id` LIMIT 0,10 [ RunTime:0.043630s ]
+[ sql ] [ SQL ] SELECT * FROM `en_info` [ RunTime:0.000575s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:42+08:00] 127.0.0.1 GET www.test.com/admin/info/index.html?page=1&limit=10
+[运行时间：0.062194s] [吞吐率：16.08req/s] [内存消耗：4,344.48kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/info/index/menuid/58.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018696s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001123s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001116s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_info` [ RunTime:0.000841s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`b`.`classname`,`a`.`posttime`,`a`.`classid` FROM `en_info` `a` INNER JOIN `en_infoclass` `b` ON `a`.`classid`=`b`.`id` LIMIT 0,10 [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SELECT * FROM `en_info` [ RunTime:0.000270s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:46+08:00] 127.0.0.1 GET www.test.com/admin/info/index.html?page=1&limit=10
+[运行时间：0.061702s] [吞吐率：16.21req/s] [内存消耗：4,344.48kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/info/index/menuid/58.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018033s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001081s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001104s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_info` [ RunTime:0.000829s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`b`.`classname`,`a`.`posttime`,`a`.`classid` FROM `en_info` `a` INNER JOIN `en_infoclass` `b` ON `a`.`classid`=`b`.`id` LIMIT 0,10 [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT * FROM `en_info` [ RunTime:0.000350s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:48+08:00] 127.0.0.1 GET www.test.com/admin/infolist/index/menuid/59.html
+[运行时间：0.125729s] [吞吐率：7.95req/s] [内存消耗：4,610.05kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infolist/index/menuid/59_html' => '',
+  'menuid' => '59',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infolist\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023984s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001127s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001099s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000345s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:48+08:00] 127.0.0.1 GET www.test.com/admin/infolist/index.html?page=1&limit=10
+[运行时间：0.086796s] [吞吐率：11.52req/s] [内存消耗：4,588.14kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/infolist/index/menuid/59.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infolist/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017092s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001632s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000987s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_infolist` [ RunTime:0.001574s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`classname` FROM `en_infolist` `a` INNER JOIN `en_infoclass` `b` ON `a`.`classid`=`b`.`id` ORDER BY `a`.`orderid` DESC,`a`.`classid` DESC LIMIT 0,10 [ RunTime:0.010665s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infolist` [ RunTime:0.000503s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:51+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/60.html
+[运行时间：0.140935s] [吞吐率：7.10req/s] [内存消耗：4,612.04kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/60_html' => '',
+  'menuid' => '60',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000656s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.000986s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001059s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000279s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index.html?page=1&limit=10
+[运行时间：0.076052s] [吞吐率：13.15req/s] [内存消耗：4,394.76kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000620s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.000998s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001106s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_infoimg` [ RunTime:0.001701s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`classname` FROM `en_infoimg` `a` INNER JOIN `en_infoclass` `b` ON `a`.`classid`=`b`.`id` ORDER BY `a`.`orderid` DESC,`a`.`classid` DESC LIMIT 0,10 [ RunTime:0.018906s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoimg` [ RunTime:0.000439s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_4.jpg
+[运行时间：0.057919s] [吞吐率：17.27req/s] [内存消耗：4,611.80kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_4_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'slideimg_4.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000865s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001233s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001038s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000375s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_3.jpg
+[运行时间：0.073574s] [吞吐率：13.59req/s] [内存消耗：4,611.78kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_3_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'slideimg_3.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000794s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001206s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001142s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000364s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_2.jpg
+[运行时间：0.084217s] [吞吐率：11.87req/s] [内存消耗：4,611.80kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_2_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'slideimg_2.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019679s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001866s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001100s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000279s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_1.jpg
+[运行时间：0.099583s] [吞吐率：10.04req/s] [内存消耗：4,611.78kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_1_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'slideimg_1.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010594s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001874s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001103s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000368s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/I559.jpg
+[运行时间：0.101906s] [吞吐率：9.81req/s] [内存消耗：4,611.75kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/I559_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'I559.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017834s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001258s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001127s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000293s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/moto.jpg
+[运行时间：0.125919s] [吞吐率：7.94req/s] [内存消耗：4,611.75kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/moto_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'moto.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018487s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001278s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000893s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001245s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000346s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/zhonghua.jpg
+[运行时间：0.080441s] [吞吐率：12.43req/s] [内存消耗：4,611.75kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/zhonghua_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'zhonghua.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021193s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001089s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001451s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000261s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/361du.jpg
+[运行时间：0.074558s] [吞吐率：13.41req/s] [内存消耗：4,611.73kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/361du_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => '361du.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018827s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.000987s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000280s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:52+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/iMac.jpg
+[运行时间：0.073516s] [吞吐率：13.60req/s] [内存消耗：4,611.75kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/iMac_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'iMac.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024315s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001218s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001049s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000182s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:54+08:00] 127.0.0.1 GET www.test.com/admin/upload/aimgage.html?id=15&src=\public\uploads\image\20201019\d4efdd074a225f2d2d7be5a70d24d050.jpg
+[运行时间：0.152828s] [吞吐率：6.54req/s] [内存消耗：3,775.55kb] [文件加载：149]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload/aimgage_html' => '',
+  'id' => '15',
+  'src' => '\\public\\uploads\\image\\20201019\\d4efdd074a225f2d2d7be5a70d24d050.jpg',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013300s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001108s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000411s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:21:56+08:00] 127.0.0.1 GET www.test.com/admin/upload/aimgage.html?id=15&src=\public\uploads\image\20201019\d4efdd074a225f2d2d7be5a70d24d050.jpg
+[运行时间：0.044163s] [吞吐率：22.64req/s] [内存消耗：3,775.55kb] [文件加载：149]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload/aimgage_html' => '',
+  'id' => '15',
+  'src' => '\\public\\uploads\\image\\20201019\\d4efdd074a225f2d2d7be5a70d24d050.jpg',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012984s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001080s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000393s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:01+08:00] 127.0.0.1 GET www.test.com/admin/upload/aimgage.html?id=15&src=\public\uploads\image\20201019\d4efdd074a225f2d2d7be5a70d24d050.jpg
+[运行时间：0.062415s] [吞吐率：16.02req/s] [内存消耗：3,775.55kb] [文件加载：149]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload/aimgage_html' => '',
+  'id' => '15',
+  'src' => '\\public\\uploads\\image\\20201019\\d4efdd074a225f2d2d7be5a70d24d050.jpg',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024208s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001711s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000577s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:03+08:00] 127.0.0.1 GET www.test.com/admin/upload/aimgage.html?id=15&src=\public\uploads\image\20201019\d4efdd074a225f2d2d7be5a70d24d050.jpg
+[运行时间：0.056520s] [吞吐率：17.69req/s] [内存消耗：3,775.53kb] [文件加载：149]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload/aimgage_html' => '',
+  'id' => '15',
+  'src' => '\\public\\uploads\\image\\20201019\\d4efdd074a225f2d2d7be5a70d24d050.jpg',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024193s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001161s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000474s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:05+08:00] 127.0.0.1 GET www.test.com/admin/upload/aimgage.html?id=15&src=\public\uploads\image\20201019\d4efdd074a225f2d2d7be5a70d24d050.jpg
+[运行时间：0.048324s] [吞吐率：20.69req/s] [内存消耗：3,775.53kb] [文件加载：149]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload/aimgage_html' => '',
+  'id' => '15',
+  'src' => '\\public\\uploads\\image\\20201019\\d4efdd074a225f2d2d7be5a70d24d050.jpg',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017096s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000391s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:11+08:00] 127.0.0.1 GET www.test.com/admin/upload/aimgage.html?id=14&src=templates/default/images/imgdata/slideimg_4.jpg
+[运行时间：0.051839s] [吞吐率：19.29req/s] [内存消耗：3,775.48kb] [文件加载：149]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload/aimgage_html' => '',
+  'id' => '14',
+  'src' => 'templates/default/images/imgdata/slideimg_4.jpg',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021141s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001054s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000394s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:11+08:00] 127.0.0.1 GET www.test.com/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_4.jpg
+[运行时间：0.065143s] [吞吐率：15.35req/s] [内存消耗：4,611.80kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/infoimg/index/menuid/60.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoimg/index/menuid/templates/default/images/imgdata/slideimg_4_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'slideimg_4.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoimg\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019284s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001109s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001108s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000344s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:23+08:00] 127.0.0.1 GET www.test.com/admin/soft/index/menuid/61.html
+[运行时间：0.048141s] [吞吐率：20.77req/s] [内存消耗：4,606.34kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/soft/index/menuid/61_html' => '',
+  'menuid' => '61',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\soft\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000906s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001102s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000445s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:23+08:00] 127.0.0.1 GET www.test.com/admin/soft/index.html?page=1&limit=10
+[运行时间：0.171934s] [吞吐率：5.82req/s] [内存消耗：4,382.72kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/soft/index/menuid/61.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/soft/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015014s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001108s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001106s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_soft` [ RunTime:0.002556s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`classname` FROM `en_soft` `a` INNER JOIN `en_infoclass` `b` ON `a`.`classid`=`b`.`id` ORDER BY `a`.`orderid` DESC,`a`.`classid` DESC LIMIT 0,10 [ RunTime:0.014685s ]
+[ sql ] [ SQL ] SELECT * FROM `en_soft` [ RunTime:0.000613s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:23+08:00] 127.0.0.1 GET www.test.com/admin/soft/index/menuid/templates/default/images/imgdata/mobliebaidulogo.jpg
+[运行时间：0.077491s] [吞吐率：12.90req/s] [内存消耗：4,606.10kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/soft/index/menuid/61.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/soft/index/menuid/templates/default/images/imgdata/mobliebaidulogo_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'mobliebaidulogo.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\soft\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021100s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.002718s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001660s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000431s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:23+08:00] 127.0.0.1 GET www.test.com/admin/soft/index/menuid/templates/default/images/imgdata/qqlogo.gif
+[运行时间：0.089981s] [吞吐率：11.11req/s] [内存消耗：4,606.06kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/soft/index/menuid/61.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/soft/index/menuid/templates/default/images/imgdata/qqlogo_gif' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'qqlogo.gif',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\soft\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020158s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.002719s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.001067s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001117s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000360s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:26+08:00] 127.0.0.1 GET www.test.com/admin/upload/aimgage.html?id=2&src=templates/default/images/imgdata/mobliebaidulogo.jpg
+[运行时间：0.047544s] [吞吐率：21.03req/s] [内存消耗：3,775.50kb] [文件加载：149]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/soft/index/menuid/61.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload/aimgage_html' => '',
+  'id' => '2',
+  'src' => 'templates/default/images/imgdata/mobliebaidulogo.jpg',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014969s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001121s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000402s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:26+08:00] 127.0.0.1 GET www.test.com/admin/soft/index/menuid/templates/default/images/imgdata/mobliebaidulogo.jpg
+[运行时间：0.073972s] [吞吐率：13.52req/s] [内存消耗：4,606.12kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/soft/index/menuid/61.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/soft/index/menuid/templates/default/images/imgdata/mobliebaidulogo_jpg' => '',
+  'menuid' => 'templates',
+  'default' => 'images',
+  'imgdata' => 'mobliebaidulogo.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\soft\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018906s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001725s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001213s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000422s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:28+08:00] 127.0.0.1 GET www.test.com/admin/soft/edit.html?id=2
+[运行时间：0.081269s] [吞吐率：12.30req/s] [内存消耗：4,859.93kb] [文件加载：174]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/soft/index/menuid/61.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/soft/edit_html' => '',
+  'id' => '2',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\soft\edit.html [ array (
+  0 => 'infoclass',
+  1 => 'edit',
+  2 => 'time',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015624s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001132s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001191s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_infoclass` [ RunTime:0.001152s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_soft` [ RunTime:0.001309s ]
+[ sql ] [ SQL ] SELECT * FROM `en_soft` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000726s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:28+08:00] 127.0.0.1 GET www.test.com/admin/soft/templates/default/images/imgdata/mobliebaidulogo.jpg
+[运行时间：0.154605s] [吞吐率：6.47req/s] [内存消耗：4,510.80kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/soft/edit.html?id=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/soft/templates/default/images/imgdata/mobliebaidulogo_jpg' => '',
+  'default' => 'images',
+  'imgdata' => 'mobliebaidulogo.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\common\view\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010992s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001542s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.001906s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.003927s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_adminlog` [ RunTime:0.001135s ]
+[ sql ] [ SQL ] INSERT INTO `en_adminlog` (`uid` , `status` , `info` , `get` , `ip` , `create_time`) VALUES (1 , 0 , '提示语:该页面不存在！' , '/admin/soft/templates/default/images/imgdata/mobliebaidulogo.jpg' , '127.0.0.1' , 1604370148) [ RunTime:0.079967s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:50+08:00] 127.0.0.1 GET www.test.com/admin/soft/edit.html?id=2
+[运行时间：0.083083s] [吞吐率：12.04req/s] [内存消耗：4,860.21kb] [文件加载：174]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/soft/index/menuid/61.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/soft/edit_html' => '',
+  'id' => '2',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\soft\edit.html [ array (
+  0 => 'infoclass',
+  1 => 'edit',
+  2 => 'time',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013676s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_infoclass` [ RunTime:0.000899s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_soft` [ RunTime:0.002218s ]
+[ sql ] [ SQL ] SELECT * FROM `en_soft` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000598s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:50+08:00] 127.0.0.1 GET www.test.com/admin/soft/templates/default/images/imgdata/mobliebaidulogo.jpg
+[运行时间：0.186261s] [吞吐率：5.37req/s] [内存消耗：4,511.11kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.test.com/admin/soft/edit.html?id=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/soft/templates/default/images/imgdata/mobliebaidulogo_jpg' => '',
+  'default' => 'images',
+  'imgdata' => 'mobliebaidulogo.jpg',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\common\view\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000655s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001067s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001654s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001401s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_adminlog` [ RunTime:0.002358s ]
+[ sql ] [ SQL ] INSERT INTO `en_adminlog` (`uid` , `status` , `info` , `get` , `ip` , `create_time`) VALUES (1 , 0 , '提示语:该页面不存在！' , '/admin/soft/templates/default/images/imgdata/mobliebaidulogo.jpg' , '127.0.0.1' , 1604370170) [ RunTime:0.120507s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:55+08:00] 127.0.0.1 GET www.test.com/admin/member/index/menuid/66.html
+[运行时间：0.084210s] [吞吐率：11.88req/s] [内存消耗：4,584.83kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/index/menuid/66_html' => '',
+  'menuid' => '66',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\member\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018352s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001181s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001119s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000364s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:55+08:00] 127.0.0.1 GET www.test.com/admin/member/index.html?page=1&limit=10
+[运行时间：0.076693s] [吞吐率：13.04req/s] [内存消耗：4,371.59kb] [文件加载：166]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/member/index/menuid/66.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013686s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001053s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_member` [ RunTime:0.002125s ]
+[ sql ] [ SQL ] SELECT * FROM `en_member` LIMIT 0,10 [ RunTime:0.017780s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:22:58+08:00] 127.0.0.1 GET www.test.com/admin/member/edit.html?id=4
+[运行时间：0.061621s] [吞吐率：16.23req/s] [内存消耗：4,690.88kb] [文件加载：172]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/member/index/menuid/66.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/edit_html' => '',
+  'id' => '4',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\member\edit.html [ array (
+  0 => 'edit',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012735s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001087s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_member` [ RunTime:0.000961s ]
+[ sql ] [ SQL ] SELECT * FROM `en_member` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000529s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:02+08:00] 127.0.0.1 GET www.test.com/admin/upload/aimgage.html?id=4&src=\public\uploads\image\20201019\b647bd6232586d8fe3f3242a065a1594.jpg
+[运行时间：0.042586s] [吞吐率：23.48req/s] [内存消耗：3,775.53kb] [文件加载：149]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/member/index/menuid/66.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload/aimgage_html' => '',
+  'id' => '4',
+  'src' => '\\public\\uploads\\image\\20201019\\b647bd6232586d8fe3f3242a065a1594.jpg',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009979s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001058s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000397s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:04+08:00] 127.0.0.1 GET www.test.com/admin/member/edit.html?id=4
+[运行时间：0.077117s] [吞吐率：12.97req/s] [内存消耗：4,690.91kb] [文件加载：172]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/member/index/menuid/66.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/edit_html' => '',
+  'id' => '4',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\member\edit.html [ array (
+  0 => 'edit',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021306s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001009s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001084s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_member` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `en_member` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000520s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:21+08:00] 127.0.0.1 GET www.test.com/admin/member/index.html?page=1&limit=30
+[运行时间：0.070637s] [吞吐率：14.16req/s] [内存消耗：4,371.62kb] [文件加载：166]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/member/index/menuid/66.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/index_html' => '',
+  'page' => '1',
+  'limit' => '30',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023714s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001723s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001068s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_member` [ RunTime:0.001022s ]
+[ sql ] [ SQL ] SELECT * FROM `en_member` LIMIT 0,30 [ RunTime:0.000611s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:22+08:00] 127.0.0.1 GET www.test.com/admin/member/index.html?page=1&limit=10
+[运行时间：0.058609s] [吞吐率：17.06req/s] [内存消耗：4,371.62kb] [文件加载：166]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/member/index/menuid/66.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012856s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.002132s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001084s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_member` [ RunTime:0.001189s ]
+[ sql ] [ SQL ] SELECT * FROM `en_member` LIMIT 0,10 [ RunTime:0.000666s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:23+08:00] 127.0.0.1 GET www.test.com/admin/weblink/index/menuid/65.html
+[运行时间：0.070138s] [吞吐率：14.26req/s] [内存消耗：4,580.88kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/weblink/index/menuid/65_html' => '',
+  'menuid' => '65',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\weblink\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011033s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001956s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001239s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000706s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:23+08:00] 127.0.0.1 GET www.test.com/admin/weblink/index.html?page=1&limit=10
+[运行时间：0.066119s] [吞吐率：15.12req/s] [内存消耗：4,341.04kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/weblink/index/menuid/65.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/weblink/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010864s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001059s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001107s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_weblink` [ RunTime:0.002787s ]
+[ sql ] [ SQL ] SELECT * FROM `en_weblink` LIMIT 0,10 [ RunTime:0.008987s ]
+[ sql ] [ SQL ] SELECT * FROM `en_weblink` [ RunTime:0.000328s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:32+08:00] 127.0.0.1 GET www.test.com/admin/message/index/menuid/64.html
+[运行时间：0.057771s] [吞吐率：17.31req/s] [内存消耗：4,597.14kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/message/index/menuid/64_html' => '',
+  'menuid' => '64',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\message\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011658s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001122s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001509s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000365s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:32+08:00] 127.0.0.1 GET www.test.com/admin/message/index.html?page=1&limit=10
+[运行时间：0.076702s] [吞吐率：13.04req/s] [内存消耗：4,337.10kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/message/index/menuid/64.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/message/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017521s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001109s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_message` [ RunTime:0.001238s ]
+[ sql ] [ SQL ] SELECT * FROM `en_message` LIMIT 0,20 [ RunTime:0.013721s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:40+08:00] 127.0.0.1 GET www.test.com/admin/message/edit.html?id=1
+[运行时间：0.068396s] [吞吐率：14.62req/s] [内存消耗：4,618.52kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/message/index/menuid/64.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/message/edit_html' => '',
+  'id' => '1',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\message\edit.html [ array (
+  0 => 'time',
+  1 => 'edit',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019623s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001056s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001241s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_message` [ RunTime:0.000975s ]
+[ sql ] [ SQL ] SELECT * FROM `en_message` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000566s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:52+08:00] 127.0.0.1 POST www.test.com/admin/message/multi.html
+[运行时间：0.126336s] [吞吐率：7.92req/s] [内存消耗：4,269.54kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'content-length' => '20',
+  'accept' => '*/*',
+  'origin' => 'http://www.test.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.test.com/admin/message/index/menuid/64.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/message/multi_html' => '',
+  'id' => '1',
+  'checkinfo' => 'false',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015251s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001106s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001115s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_message` [ RunTime:0.000896s ]
+[ sql ] [ SQL ] UPDATE `en_message`  SET `checkinfo` = 'false'  WHERE  `id` = 1 [ RunTime:0.032076s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_adminlog` [ RunTime:0.001107s ]
+[ sql ] [ SQL ] INSERT INTO `en_adminlog` (`uid` , `status` , `info` , `get` , `ip` , `create_time`) VALUES (1 , 1 , '提示语:操作成功！' , '/admin/message/multi.html' , '127.0.0.1' , 1604370232) [ RunTime:0.035884s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:52+08:00] 127.0.0.1 POST www.test.com/admin/message/multi.html
+[运行时间：0.132177s] [吞吐率：7.57req/s] [内存消耗：4,269.57kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'content-length' => '19',
+  'accept' => '*/*',
+  'origin' => 'http://www.test.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.test.com/admin/message/index/menuid/64.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/message/multi_html' => '',
+  'id' => '1',
+  'checkinfo' => 'true',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025974s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001482s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001319s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_message` [ RunTime:0.000987s ]
+[ sql ] [ SQL ] UPDATE `en_message`  SET `checkinfo` = 'true'  WHERE  `id` = 1 [ RunTime:0.032656s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_adminlog` [ RunTime:0.001178s ]
+[ sql ] [ SQL ] INSERT INTO `en_adminlog` (`uid` , `status` , `info` , `get` , `ip` , `create_time`) VALUES (1 , 1 , '提示语:操作成功！' , '/admin/message/multi.html' , '127.0.0.1' , 1604370232) [ RunTime:0.025523s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:54+08:00] 127.0.0.1 GET www.test.com/admin/infoclass/index/menuid/57.html
+[运行时间：0.084836s] [吞吐率：11.79req/s] [内存消耗：4,613.70kb] [文件加载：171]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoclass/index/menuid/57_html' => '',
+  'menuid' => '57',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\infoclass\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016750s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001056s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000350s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:23:54+08:00] 127.0.0.1 POST www.test.com/admin/infoclass/index.html
+[运行时间：0.059534s] [吞吐率：16.80req/s] [内存消耗：4,359.52kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'content-length' => '46',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.test.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.test.com/admin/infoclass/index/menuid/57.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/infoclass/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'filterRules' => '[]',
+  'sort' => '[]',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012588s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.002139s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001088s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_infoclass` [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` ORDER BY `orderid` ASC [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT * FROM `en_infoclass` [ RunTime:0.000725s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:24:23+08:00] 127.0.0.1 GET www.test.com/admin/info/index/menuid/58.html
+[运行时间：0.068086s] [吞吐率：14.69req/s] [内存消耗：4,560.88kb] [文件加载：170]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.test.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index/menuid/58_html' => '',
+  'menuid' => '58',
+)
+[ info ] [ VIEW ] E:\MyServer\www\test\application\admin\view\info\index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022092s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001119s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001081s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000374s ]
+---------------------------------------------------------------
+
+[2020-11-03T10:24:23+08:00] 127.0.0.1 GET www.test.com/admin/info/index.html?page=1&limit=10
+[运行时间：0.048428s] [吞吐率：20.65req/s] [内存消耗：4,344.48kb] [文件加载：165]
+[ info ] [ LANG ] E:\MyServer\www\test\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.test.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'referer' => 'http://www.test.com/admin/info/index/menuid/58.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dju9obh2o7s6as5m8seh10pbih',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001357s ] mysql:host=127.0.0.1;dbname=test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_hooks` [ RunTime:0.001657s ]
+[ sql ] [ SQL ] SELECT `name`,`addons`,`modules` FROM `en_hooks` WHERE  `status` = 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_admin` [ RunTime:0.001110s ]
+[ sql ] [ SQL ] SELECT * FROM `en_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `en_info` [ RunTime:0.002056s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`b`.`classname`,`a`.`posttime`,`a`.`classid` FROM `en_info` `a` INNER JOIN `en_infoclass` `b` ON `a`.`classid`=`b`.`id` LIMIT 0,10 [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT * FROM `en_info` [ RunTime:0.000437s ]

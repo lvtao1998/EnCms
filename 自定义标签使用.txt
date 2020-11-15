@@ -1,0 +1,19 @@
+标签ls 闭合标签 {ls}{/ls}
+db 表的名称
+classid 表的字段
+limit 显示几条
+order 按什么排序
+checkinfo 审核状态
+id  如id="vo" {$vo.title}
+page 页数
+
+lk 友情链接的闭合标签
+limit 显示几条
+order 按什么排序
+checkinfo 审核状态
+id  如id="vo" {$vo.title}
+
+info 开放标签
+db 表名
+id 数据库里面classid 后台里面的id
+field 要输出的字段名称
