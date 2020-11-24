@@ -12,7 +12,7 @@ class Cms extends TagLib
 		// 友情链接
 		'lk' => ['attr'=>'limit,order,checkinfo,id,key','close'=>1],
 		// 单页
-		'info' => ['attr'=>'db,id,field','close'=>0],
+		'info' => ['attr'=>'db,id,classid,field','close'=>0],
 		//栏目
 		'lm' => ['attr'=>'db,zid,pid,limit,checkinfo,id,key,page','close'=>1],
 	];
@@ -333,8 +333,14 @@ class Cms extends TagLib
 	{
 		$db = isset($tag['db']) ? $tag['db'] : 'info';
 		$id = isset($tag['id']) ? $tag['id'] : '';
+		$classid = isset($tag['classid']) ? $tag['classid'] : '';
 		$field = isset($tag['field']) ? $tag['field'] : '';
-		$res = db("$db")->where('classid',$id)->find();
+		if($classid){
+			$res = db("$db")->where('classid',$classid)->find();
+		}
+		if($id){
+			$res = db("$db")->where('id',$id)->find();
+		}
 		return $res[''.$field.''];
 	}
 }
