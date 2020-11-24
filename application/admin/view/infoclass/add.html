@@ -22,7 +22,7 @@
                     <select name="parentid" lay-verify="required">
                         <option value="0">一级栏目</option>
                         {volist name="parent" id="vo"}
-                        <option value="{$vo.id}">{$vo.classname}</option>
+                        <option value="{$vo.id}"{if condition="$parentid eq $vo.id"} selected=""{/if}>{$vo.classname}</option>
                         {/volist}
                     </select>
                 </div>
