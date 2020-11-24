@@ -24,6 +24,7 @@ class Infoclass extends Adminbase
 	{
 		$model = model('Infoclass');
 		$parent = $model->treeSelect();
+		$parentid = input('parentid');
 		if(request()->isPost())
 		{
 			$data = input('post.');
@@ -53,6 +54,7 @@ class Infoclass extends Adminbase
 		}
 		$this->assign([
 			'parent' => $parent,
+			'parentid'=>$parentid,
 		]);
 		return view();
 	}
