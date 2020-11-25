@@ -27,14 +27,14 @@ class Upload extends Controller
             //缩略图未完成 
             $image = \think\Image::open(request()->file('file'));
             $time = time();
-            $image->thumb($width,$height,\think\Image::THUMB_CENTER)->text('十年磨一剑',ROOT_PATH.'HYQingKongTiJ.ttf',20,'#ffffff')->save(ROOT_PATH . 'public' . DS . 'uploads' . DS . 'thumb'. DS . $time .'.png');
+            $image->thumb($width,$height,\think\Image::THUMB_CENTER)->text('十年磨一剑',ROOT_PATH.'HYQingKongTiJ.ttf',20,'#ffffff',,\think\Image::WATER_CENTER)->save(ROOT_PATH . 'public' . DS . 'uploads' . DS . 'thumb'. DS . $time .'.png');
             return DS . 'public' . DS . 'uploads' . DS . 'thumb'. DS . $time .'.png';
         }
         elseif($watermark && empty($width) && empty($height)){
             //缩略图未完成 
             $image = \think\Image::open(request()->file('file'));
             $time = time();
-            $image->text('十年磨一剑',ROOT_PATH.'HYQingKongTiJ.ttf',20,'#ffffff')->save(ROOT_PATH . 'public' . DS . 'uploads' . DS . 'thumb'. DS . $time .'.png');
+            $image->text('十年磨一剑',ROOT_PATH.'HYQingKongTiJ.ttf',20,'#ffffff',,\think\Image::WATER_CENTER)->save(ROOT_PATH . 'public' . DS . 'uploads' . DS . 'thumb'. DS . $time .'.png');
             return DS . 'public' . DS . 'uploads' . DS . 'thumb'. DS . $time .'.png';
         }
         else
