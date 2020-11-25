@@ -112,7 +112,7 @@ class Member extends Adminbase
             {
                 unset($data['avatar']);
             }
-            if($data['avatar'] == 404)
+            if($data['avatar'] == "404")
             {
                 $data['avatar'] = '';
             }
