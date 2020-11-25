@@ -131,7 +131,7 @@ class Soft extends Adminbase
             {
                 unset($data['picurl']);
             }
-            if($data['picurl'] == 404)
+            if($data['picurl'] == "404")
             {
                 $data['picurl'] = '';
             }
