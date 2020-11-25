@@ -29,7 +29,7 @@
                 <div class="layui-input-inline">
                     <button type="button" class="layui-btn" id="test1">上传</button>
                     <div class="layui-upload-list">
-                        <input type="hidden" id="avatar">
+                        <input type="hidden" id="avatar" name="avatar">
                         <img class="layui-upload-img" style="width: 100px" id="demo1" src="{$edit.avatar}">
                         <p id="demoText"></p>
                     </div>
@@ -216,7 +216,6 @@ layui.use('upload', function(){
         return layer.msg('上传失败');
       }
       //上传成功
-      $("#avatar").attr('name','avatar');
       $("#avatar").attr('value',res['data']['src']);
       $("#bs").html("");
       $("#bs").append('<button type="button" onclick="delImg()" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon"></i></button>');
