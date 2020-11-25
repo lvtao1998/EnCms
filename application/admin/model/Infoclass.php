@@ -30,11 +30,11 @@ class Infoclass extends Model
         });
         Infoclass::event('before_delete', function ($data) {
         	$Infoclass = Infoclass::find($data->id);
-        	if($Infoclass->picurl)
+        	if(isset($Infoclass->picurl))
     		{
         		@unlink($_SERVER['DOCUMENT_ROOT'].$Infoclass->picurl);
         	}
-    		if($Infoclass->picarr)
+    		if(isset($Infoclass->picarr))
     		{
     			$picarr = explode(',',$Infoclass->picarr);
         		foreach ($picarr as $v) {
