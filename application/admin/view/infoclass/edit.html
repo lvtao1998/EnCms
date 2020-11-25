@@ -64,7 +64,7 @@
                         <p id="demoText"></p>
                     </div>
                     <div id="bs"></div>
-                    <input type="hidden" name="picurl" value="" id="picurl">
+                    <input type="hidden" name="picurl" id="picurl">
                 </div> 
                 <div class="layui-form-mid layui-word-aux">添加了宽度和高度自动生成从中间剪切的缩略图</div>
             </div>
@@ -228,13 +228,5 @@ function delImgs(){
     }
   })
 }  
-</script>
-<script>
-  $(function(){
-    var desc = $("#demo1").attr("src");
-    if(desc){
-      $("#bs").append('<button type="button" onclick="delImg()" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon"></i></button>');
-    }
-  })
 </script>
 {/block}
