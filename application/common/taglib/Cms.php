@@ -26,20 +26,17 @@ class Cms extends TagLib
 		$vid = isset($tag['id']) ? $tag['id'] : 'v';
 		$page = isset($tag['page']) ? $tag['page'] : '1';
 		$str = '<?php ';
+		$str .= '$list = db("'.$db.'")->page('.$page.')->limit('.$limit.')';
+		if($checkinfo){
+			$str .= '->where("checkinfo","'.$checkinfo.'")';
+		}
 		if($zid){
-			if($checkinfo){
-				$str .= '$list = db("'.$db.'")->where("id",'.$zid.')->where("checkinfo","'.$checkinfo.'")->page('.$page.')->limit('.$limit.')->select();';
-			}else{
-				$str .= '$list = db("'.$db.'")->where("id",'.$zid.')->page('.$page.')->limit('.$limit.')->select();';
-			}	
+			$str .= '->where("id",'.$zid.')';
 		}
 		if($pid){
-			if($checkinfo){
-				$str .= '$list = db("'.$db.'")->where("parentid",'.$pid.')->page('.$page.')->where("checkinfo","'.$checkinfo.'")->limit('.$limit.')->select();';
-			}else{
-				$str .= '$list = db("'.$db.'")->where("parentid",'.$pid.')->page('.$page.')->limit('.$limit.')->select();';
-			}	
+			$str .= '->where("parentid",'.$pid.')';
 		}
+		$str .= '->select();';
 		$str .= 'foreach($list as $'.$key.' => $'.$vid.') :?>';
 		$str .= $content;
 		$str .= '<?php endforeach; ?>';
@@ -50,231 +47,21 @@ class Cms extends TagLib
 	{
 		$db = isset($tag['db']) ? $tag['db'] : '';
 		$classid = isset($tag['classid']) ? $tag['classid'] : '';
-		$limit = isset($tag['limit']) ? $tag['limit'] : '';
-		$order = isset($tag['order']) ? $tag['order'] : '';
+		$limit = isset($tag['limit']) ? $tag['limit'] : 100000000;
+		$order = isset($tag['order']) ? $tag['order'] : 'id desc';
 		$key = isset($tag['key']) ? $tag['key'] : 'i';
 		$checkinfo = isset($tag['checkinfo']) ? $tag['checkinfo'] : '';
 		$vid = isset($tag['id']) ? $tag['id'] : 'v';
-		$page = isset($tag['page']) ? $tag['page'] : '1';
+		$page = isset($tag['page']) ? $tag['page'] : 1;
 		$str = '<?php ';
-		if($page)
-		{
-			if($classid)
-			{
-				if($checkinfo)
-				{
-					if($limit)
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->where("checkinfo","'.$checkinfo.'")->page('.$page.')->limit('.$limit.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->where("checkinfo","'.$checkinfo.'")->page('.$page.')->limit('.$limit.')->select();';
-						}
-					}
-					else
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->where("checkinfo","'.$checkinfo.'")->page('.$page.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->where("checkinfo","'.$checkinfo.'")->page('.$page.')->select();';
-						}
-					}
-				}
-				else
-				{
-					if($limit)
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->limit('.$limit.')->order("'.$order.'")->page('.$page.')->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->limit('.$limit.')->page('.$page.')->select();';
-						}
-					}
-					else
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->order("'.$order.'")->page('.$page.')->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->page('.$page.')->select();';
-						}
-					}
-				}
-			}
-			else
-			{
-				if($checkinfo)
-				{
-					if($limit)
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("checkinfo","'.$checkinfo.'")->page('.$page.')->limit('.$limit.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("checkinfo","'.$checkinfo.'")->page('.$page.')->limit('.$limit.')->select();';
-						}
-					}
-					else
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("checkinfo","'.$checkinfo.'")->page('.$page.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("checkinfo","'.$checkinfo.'")->page('.$page.')->select();';
-						}
-					}
-				}
-				else
-				{
-					if($limit)
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->limit('.$limit.')->order("'.$order.'")->page('.$page.')->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->limit('.$limit.')->page('.$page.')->select();';
-						}
-					}
-					else
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->page('.$page.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->page('.$page.')->select();';
-						}
-					}
-				}
-			}
+		$str .= '$list = db("'.$db.'")->page('.$page.')->limit('.$limit.')->order("'.$order.'")';
+		if($classid){
+			$str .= '->where("classid","'.$classid.'")';
 		}
-		else
-		{
-			if($classid)
-			{
-				if($checkinfo)
-				{
-					if($limit)
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->where("checkinfo","'.$checkinfo.'")->limit('.$limit.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->where("checkinfo","'.$checkinfo.'")->limit('.$limit.')->select();';
-						}
-					}
-					else
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->where("checkinfo","'.$checkinfo.'")->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->where("checkinfo","'.$checkinfo.'")->select();';
-						}
-					}
-				}
-				else
-				{
-					if($limit)
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->limit('.$limit.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->limit('.$limit.')->select();';
-						}
-					}
-					else
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("classid",'.$classid.')->select();';
-						}
-					}
-				}
-			}
-			else
-			{
-				if($checkinfo)
-				{
-					if($limit)
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("checkinfo","'.$checkinfo.'")->limit('.$limit.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("checkinfo","'.$checkinfo.'")->limit('.$limit.')->select();';
-						}
-					}
-					else
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->where("checkinfo","'.$checkinfo.'")->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->where("checkinfo","'.$checkinfo.'")->select();';
-						}
-					}
-				}
-				else
-				{
-					if($limit)
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->limit('.$limit.')->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->limit('.$limit.')->select();';
-						}
-					}
-					else
-					{
-						if($order)
-						{
-							$str .= '$list = db("'.$db.'")->order("'.$order.'")->select();';
-						}
-						else
-						{
-							$str .= '$list = db("'.$db.'")->select();';
-						}
-					}
-				}
-			}
+		if($checkinfo){
+			$str .= '->where("checkinfo","'.$checkinfo.'")';
 		}
+		$str .= '->select();';
 		$str .= 'foreach($list as $'.$key.' => $'.$vid.') :?>';
 		$str .= $content;
 		$str .= '<?php endforeach; ?>';
@@ -288,42 +75,17 @@ class Cms extends TagLib
 		$vid = isset($tag['id']) ? $tag['id'] : 'v';
 		$key = isset($tag['key']) ? $tag['key'] : 'i';
 		$str = '<?php ';
-		if($checkinfo)
-		{
-			if($limit)
-			{
-				if($order)
-				{
-					$str .= '$list = db("weblink")->where("checkinfo","'.$checkinfo.'")->limit('.$limit.')->order('.$order.')->select();';
-				}
-				else
-				{
-					$str .= '$list = db("weblink")->where("checkinfo","'.$checkinfo.'")->limit('.$limit.')->select();';
-				}
-			}
-			else
-			{
-				$str .= '$list = db("weblink")->where("checkinfo","'.$checkinfo.'")->select();';
-			}
+		$str .= '$list = db("weblink")';
+		if($order){
+			$str .= '->order("'.$order.'")';
 		}
-		else
-		{
-			if($limit)
-			{
-				if($order)
-				{
-					$str .= '$list = db("weblink")->limit('.$limit.')->order('.$order.')->select();';
-				}
-				else
-				{
-					$str .= '$list = db("weblink")->limit('.$limit.')->select();';
-				}		
-			}
-			else
-			{
-				$str .= '$list = db("weblink")->select();';
-			}
+		if($limit){
+			$str .= '->limit('.$limit.')';
 		}
+		if($checkinfo){
+			$str .= '->where("checkinfo","'.$checkinfo.'")';
+		}
+		$str .= '->select();';
 		$str .= 'foreach($list as $'.$key.' => $'.$vid.') :?>';
 		$str .= $content;
 		$str .= '<?php endforeach; ?>';
