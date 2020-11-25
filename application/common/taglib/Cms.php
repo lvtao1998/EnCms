@@ -12,7 +12,7 @@ class Cms extends TagLib
 		// 友情链接
 		'lk' => ['attr'=>'limit,order,checkinfo,id,key','close'=>1],
 		// 单页
-		'info' => ['attr'=>'db,id,classid,field','close'=>0],
+		'info' => ['attr'=>'db,id,classid,field,date','close'=>0],
 		//栏目
 		'lm' => ['attr'=>'db,zid,pid,limit,checkinfo,id,key,page','close'=>1],
 	];
@@ -96,12 +96,18 @@ class Cms extends TagLib
 		$db = isset($tag['db']) ? $tag['db'] : 'info';
 		$id = isset($tag['id']) ? $tag['id'] : '';
 		$classid = isset($tag['classid']) ? $tag['classid'] : '';
+		$date = isset($tag['date']) ? $tag['date'] : 'Y-m-d H:i:s';
 		$field = isset($tag['field']) ? $tag['field'] : '';
 		if($classid){
 			$res = db("$db")->where('classid',$classid)->find();
 		}
 		if($id){
 			$res = db("$db")->where('id',$id)->find();
+		}
+		if($date){
+			if($res['posttime']){
+				$res['posttime'] = date($date,$res['posttime']);
+			}
 		}
 		return $res[''.$field.''];
 	}
