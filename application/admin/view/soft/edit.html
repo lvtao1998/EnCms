@@ -298,6 +298,16 @@ layui.use('upload', function(){
       //上传完毕
       $('#demo3').append('<input type="hidden" name="picarr[]" value="'+res['data']['src']+'">')
     }
+  }); 
+  //指定允许上传的文件类型
+  upload.render({
+    elem: '#test3'
+    ,url: "{:url('Upload/upload')}" //改成您自己的上传接口
+    ,accept: 'file' //普通文件
+    ,done: function(res){
+      layer.msg('上传成功');
+      $("#dlurl").attr('value',res['data']['src'])
+    }
   });  
 });
 function delImg(){
